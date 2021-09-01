@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld :msg="message"/>
   <input type="text" v-model="message"/>
+  <button @click="alertMessage">Alert</button>
 </template>
 
 <script>
@@ -15,6 +16,11 @@ export default {
   data(){
     return {
       message: 'Hello World!'
+    }
+  },
+  methods: {
+    alertMessage() {
+      alert(this.message)
     }
   }
 }
